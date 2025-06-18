@@ -10,18 +10,18 @@ export async function setCredentialSharedWith(
 ): Promise<ICredentialsResponse> {
 	return await makeRestApiRequest(
 		context,
-		'PUT',
+		'PUT', 
 		`/credentials/${id}/share`,
 		data as unknown as IDataObject,
-	);
-}
-
+	); 
+} 
+ 
 export async function moveCredentialToProject(
 	context: IRestApiContext,
 	id: string,
 	destinationProjectId: string,
-): Promise<void> {
+): Promise<void> { 
 	return await makeRestApiRequest(context, 'PUT', `/credentials/${id}/transfer`, {
 		destinationProjectId,
-	});
-}
+	}); 
+} 
